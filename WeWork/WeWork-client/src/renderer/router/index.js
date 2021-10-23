@@ -1,0 +1,122 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
+
+export default new Router({
+  
+  routes: [
+    {
+      path: '/',
+      name: 'main-frame',
+      component: require('@/resources/frame/mainFrame').default,
+      children:[
+        {
+          path:'/createPlan',
+          name:'create-plan',
+          component:require('@/resources/pages/createPlan').default
+        },
+        {
+          path:'/workbench',
+          name:'workbench',
+          component:require('@/resources/pages/workbench').default
+        },
+        {
+          path:'/showPlan',
+          name:'showPlan',
+          component:require('@/resources/pages/showPlanDetail').default
+        },
+        {
+          path:'/planLog',
+          name:'planLog',
+          component:require('@/resources/pages/planLog').default
+        },
+        {
+          path:'/userCenter',
+          name:'userCenter',
+          component:require('@/resources/pages/userCenter').default
+        },
+        {
+          path:'/myPlan',
+          name:'myPlan',
+          component:require('@/resources/pages/myPlan').default
+        },
+        {
+          path:'/myPlanDisplay',
+          name:'myPlanDisplay',
+          component:require('@/resources/pages/myPlanDisplay').default
+        },
+        {
+          path:'/planNote',
+          name:'planNote',
+          component:require('@/resources/pages/planNote').default
+        },
+        {
+          path:'/markdown',
+          name:'markdown',
+          component:require('@/resources/pages/markdown').default
+        },
+        {
+          path:'/workbenchPlan',
+          name:'workbenchPlan',
+          component:require('@/resources/pages/workbench_plan').default
+        },
+        {
+          path:'/message',
+          name:'message',
+          component:require('@/resources/pages/message').default
+        },
+        {
+          path:'/cowork',
+          name:'cowork',
+          component:require('@/resources/pages/cowork').default
+        },
+        {
+          path:'/coworkDisplay',
+          name:'coworkDisplay',
+          component:require('@/resources/pages/coworkDisplay').default
+        },
+        {
+          path:'/contacts',
+          name:'contacts',
+          component:require('@/resources/pages/contacts').default
+        },
+        {
+          path:'planFile',
+          name:"planFile",
+          component:require('@/resources/pages/planFile').default
+        }
+      ]
+    },
+    {
+      path:'/conference',
+      name:'conference',
+      component:require('@/resources/pages/conference').default
+    },
+    {
+      path:'/pdf',
+      name:'pdf',
+      component:require('@/resources/pages/pdf').default
+    },
+    {
+      path:'/todayWorkComponent',
+      name:'todayWorkComponent',
+      component:require('@/resources/components/local/todayWorkList').default
+    },
+    {
+      path:'/calendarComponent',
+      name:'calendarComponent',
+      component:require('@/resources/components/local/calendar').default
+    },
+    {
+      path:'/clockComponent',
+      name:'clockComponent',
+      component:require('@/resources/components/local/clock/FlipClock').default
+    },
+    {
+      path:'/noteBookComponent',
+      name:'noteBookComponent',
+      component:require('@/resources/components/local/note/index_book').default
+    }
+  ]
+})
