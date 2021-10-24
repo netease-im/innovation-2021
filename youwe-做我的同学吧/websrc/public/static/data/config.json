@@ -1,0 +1,63 @@
+{
+  "scripts": [
+    "https://cdn.bootcdn.net/ajax/libs/vue/3.0.2/vue.runtime.global.js",
+    "https://unpkg.com/vue-i18n@next",
+    "https://unpkg.com/element-plus/lib/index.full.js",
+    "https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js",
+    "https://cdn.bootcss.com/lz-string/1.4.4/lz-string.min.js"
+  ],
+  "vconsole": "https://unpkg.com/vconsole@3.7.0/dist/vconsole.min.js",
+  "apiPrefix": "/api",
+  "resourcePrefix": "https://api.yuhj.fun/yuhj",
+  "storageUrl": "ws://localhost:3333/",
+  "apiMaps": {
+    "roomList": {
+      "path": "/room"
+    },
+    "roomInfo": {
+      "path": "/room/{rest}?type={rest}"
+    },
+    "aliveTest": {
+      "path": "/user/keepalive"
+    },
+    "login": {
+      "path": "/user/login",
+      "method": "post"
+    },
+    "regist": {
+      "path": "/user/regist",
+      "method": "post"
+    },
+    "logout": {
+      "path": "/user/login",
+      "method": "DELETE"
+    },
+    "rongToken": {
+      "path": "/auth/rc"
+    },
+    "usersInfo": {
+      "path": "/user"
+    },
+    "storyList": {
+      "path": "/story"
+    },
+    "storyDetail": {
+      "path": "/story/{rest}"
+    },
+    "myRooms": {
+      "path": "/room/mine/{rest}"
+    },
+    "roomMain": {
+      "path": "/room"
+    }
+  },
+  "loadingTips": [
+    "打开开发者工具会导致浏览器卡死",
+    "登陆后能够查看更多内容",
+    "注册后你能够拥有自己的日记和梦境空间哦",
+    "登陆后在关于可以看到我的简历"
+  ],
+  "hashNumber": 4001,
+  "defaultTheme": "light",
+  "debug": false
+}

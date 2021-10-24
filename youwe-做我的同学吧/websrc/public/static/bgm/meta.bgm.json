@@ -1,0 +1,16 @@
+{
+  "updatedAt": "20210502",
+  "baseURL": "/static/iyi/bgm/",
+  "files": [
+    {
+      "name": "开心音乐1",
+      "id": "1",
+      "filename": "happy1.mp3"
+    },
+    {
+      "name": "仙侠音乐",
+      "id": "2",
+      "filename": "xianxia1.mp3"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "scripts": [
+    "https://cdn.bootcdn.net/ajax/libs/phaser/3.24.1/phaser.min.js",
+    "https://cdn.ronghub.com/RongRTC-3.2.6.min.js",
+    "/static/lib/dragonBones.p.min.js"
+  ],
+  "seqScript": true
+}
