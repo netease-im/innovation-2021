@@ -59,15 +59,6 @@ function setupConnect(story:any) {
 }
 
 
-export async function setupStage(view: HTMLCanvasElement) {
-  const app = new Application({
-    width: STAGE_WIDTH_PLAYER,
-    height: STAGE_HEIGHT_PLAYER,
-  });
-  managers.stage = new StageItemManager(app.stage);
-}
-
-
 export const roomService = {
   setupConnect,
   init(view: HTMLCanvasElement) {
