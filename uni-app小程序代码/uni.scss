@@ -1,0 +1,154 @@
+/* 引入全局scss文件 */
+@import 'uview-ui/theme.scss';
+
+/* 颜色变量 */
+// 主题色
+$primary: #30c6b0;
+// 板块主题色
+$food: #fca235;
+$food-light: #fff1cf;
+$fun: #635df7;
+$fun-light: #d5d9f8;
+$learn: #3e8bf8;
+$learn-light: #cce2fd;
+$travel: #06cc76;
+$travel-light: #c3f5e3;
+// 文本色
+$main-text: #444;
+$minus-text: #888;
+// 背景色
+$grey: #eee;
+$light-grey: #f5f5f5;
+$dark-grey: #bbb;
+// 透明文本色
+$dark: rgba(
+	$color: #000,
+	$alpha: 0.6
+);
+$light: rgba(
+	$color: #000,
+	$alpha: 0.3
+);
+$white: rgba(
+	$color: #fff,
+	$alpha: 0.8
+);
+// 其他
+$unread: #ff3a3d;
+
+// 混入
+@mixin flex-row-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-row-spaceBetween {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin transition {
+	transition: all .4s ease;
+}
+
+@mixin line-2-ellipsis {
+	display:-webkit-box;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+}
+
+// 公用样式
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.k-small-title {
+	font-weight: bold;
+	font-size: 40upx;
+	padding-left: 50upx;
+	line-height: 100upx;
+	position: relative;
+}
+
+.k-small-title::after {
+	content: '';
+	width: 60upx;
+	height: 20upx;
+	border-radius: 6upx;
+	background-color: rgba($color: $primary, $alpha: 0.4);
+	z-index: -1;
+	position: absolute;
+	right: 10upx;
+	bottom: -6upx;
+}
+
+.k-title {
+	font-weight: bold;
+	font-size: 60upx;
+	padding: 0 50upx;
+	line-height: 150upx;
+	position: relative;
+}
+
+.k-title::after {
+	content: '';
+	width: 90upx;
+	height: 30upx;
+	border-radius: 10upx;
+	background-color: rgba($color: $primary, $alpha: 0.4);
+	z-index: -1;
+	position: absolute;
+	right: 34upx;
+	bottom: -4upx;
+}
+
+.empty {
+	width: 100%;
+	height: calc(100vh - 400upx);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&-img {
+		width: 50%;
+	}
+	&-text {
+		font-size: 40upx;
+		letter-spacing: 2upx;
+		color: $light;
+	}
+}
+
+.k-active {
+	transition: all 0.3s ease;
+}
+
+.k-hover {
+	transition: all 0.2s ease;
+}
+
+.k-hover:active {
+	filter: brightness(90%);
+}
+
+.k-active:active {
+	transform: scale(0.95);
+}
+
+.k-hideText {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

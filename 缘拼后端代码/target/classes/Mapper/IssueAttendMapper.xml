@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ZMetalHeartY.demo.Mapper.IssueAttendMapper">
+    <resultMap id="BaseResultMap" type="ZMetalHeartY.demo.Entity.IssueAttend">
+        <id column="ia_id" property="iaId" jdbcType="INTEGER"/>
+        <result column="fu_id" property="fuId" jdbcType="INTEGER"/>
+        <result column="i_id" property="iId" jdbcType="INTEGER"/>
+        <result column="ia_status" property="iaStatus" jdbcType="INTEGER"/>
+        <result column="ia_msg" property="iaMsg" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        ia_id, fu_id, i_id, ia_status, ia_msg
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from issue_attend
+        where ia_id = #{iaId,jdbcType=INTEGER}
+    </select>
+    <select id="selectAllByCondition" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from issue_attend
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete
+        from issue_attend
+        where ia_id = #{iaId,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="ZMetalHeartY.demo.Entity.IssueAttend">
+        insert into issue_attend (ia_id, fu_id, i_id,
+                                  ia_status, ia_msg)
+        values (#{iaId,jdbcType=INTEGER}, #{fuId,jdbcType=INTEGER}, #{iId,jdbcType=INTEGER},
+                #{iaStatus,jdbcType=INTEGER}, #{iaMsg,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="ZMetalHeartY.demo.Entity.IssueAttend">
+        insert into issue_attend
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="iaId != null">
+                ia_id,
+            </if>
+            <if test="fuId != null">
+                fu_id,
+            </if>
+            <if test="iId != null">
+                i_id,
+            </if>
+            <if test="iaStatus != null">
+                ia_status,
+            </if>
+            <if test="iaMsg != null">
+                ia_msg,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="iaId != null">
+                #{iaId,jdbcType=INTEGER},
+            </if>
+            <if test="fuId != null">
+                #{fuId,jdbcType=INTEGER},
+            </if>
+            <if test="iId != null">
+                #{iId,jdbcType=INTEGER},
+            </if>
+            <if test="iaStatus != null">
+                #{iaStatus,jdbcType=INTEGER},
+            </if>
+            <if test="iaMsg != null">
+                #{iaMsg,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="ZMetalHeartY.demo.Entity.IssueAttend">
+        update issue_attend
+        <set>
+            <if test="fuId != null">
+                fu_id = #{fuId,jdbcType=INTEGER},
+            </if>
+            <if test="iId != null">
+                i_id = #{iId,jdbcType=INTEGER},
+            </if>
+            <if test="iaStatus != null">
+                ia_status = #{iaStatus,jdbcType=INTEGER},
+            </if>
+            <if test="iaMsg != null">
+                ia_msg = #{iaMsg,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ia_id = #{iaId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="ZMetalHeartY.demo.Entity.IssueAttend">
+        update issue_attend
+        set fu_id     = #{fuId,jdbcType=INTEGER},
+            i_id      = #{iId,jdbcType=INTEGER},
+            ia_status = #{iaStatus,jdbcType=INTEGER},
+            ia_msg    = #{iaMsg,jdbcType=VARCHAR}
+        where ia_id = #{iaId,jdbcType=INTEGER}
+    </update>
+</mapper>

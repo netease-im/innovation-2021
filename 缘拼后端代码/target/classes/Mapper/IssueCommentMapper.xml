@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ZMetalHeartY.demo.Mapper.IssueCommentMapper">
+    <resultMap id="BaseResultMap" type="ZMetalHeartY.demo.Entity.IssueComment">
+        <id column="ic_id" property="icId" jdbcType="INTEGER"/>
+        <result column="fu_id" property="fuId" jdbcType="INTEGER"/>
+        <result column="i_id" property="iId" jdbcType="INTEGER"/>
+        <result column="ic_msg" property="icMsg" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        ic_id, fu_id, i_id, ic_msg
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from issue_comment
+        where ic_id = #{icId,jdbcType=INTEGER}
+    </select>
+    <select id="selectAllByCondition" resultType="ZMetalHeartY.demo.Entity.IssueComment">
+        select
+        <include refid="Base_Column_List"/>
+        from issue_comment
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete
+        from issue_comment
+        where ic_id = #{icId,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        insert into issue_comment (ic_id, fu_id, i_id,
+                                   ic_msg)
+        values (#{icId,jdbcType=INTEGER}, #{fuId,jdbcType=INTEGER}, #{iId,jdbcType=INTEGER},
+                #{icMsg,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        insert into issue_comment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="icId != null">
+                ic_id,
+            </if>
+            <if test="fuId != null">
+                fu_id,
+            </if>
+            <if test="iId != null">
+                i_id,
+            </if>
+            <if test="icMsg != null">
+                ic_msg,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="icId != null">
+                #{icId,jdbcType=INTEGER},
+            </if>
+            <if test="fuId != null">
+                #{fuId,jdbcType=INTEGER},
+            </if>
+            <if test="iId != null">
+                #{iId,jdbcType=INTEGER},
+            </if>
+            <if test="icMsg != null">
+                #{icMsg,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        update issue_comment
+        <set>
+            <if test="fuId != null">
+                fu_id = #{fuId,jdbcType=INTEGER},
+            </if>
+            <if test="iId != null">
+                i_id = #{iId,jdbcType=INTEGER},
+            </if>
+            <if test="icMsg != null">
+                ic_msg = #{icMsg,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ic_id = #{icId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        update issue_comment
+        set fu_id  = #{fuId,jdbcType=INTEGER},
+            i_id   = #{iId,jdbcType=INTEGER},
+            ic_msg = #{icMsg,jdbcType=VARCHAR}
+        where ic_id = #{icId,jdbcType=INTEGER}
+    </update>
+</mapper>

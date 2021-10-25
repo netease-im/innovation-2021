@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2825680 */
+  src: url('https://at.alicdn.com/t/font_2825680_l6wzlqgsf1d.woff2?t=1632579195178') format('woff2'),
+       url('https://at.alicdn.com/t/font_2825680_l6wzlqgsf1d.woff?t=1632579195178') format('woff'),
+       url('https://at.alicdn.com/t/font_2825680_l6wzlqgsf1d.ttf?t=1632579195178') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiaoshi:before {
+  content: "\e8be";
+}
+
+.icon-auto:before {
+  content: "\e6eb";
+}
+
+.icon-Game:before {
+  content: "\e62d";
+}
+
+.icon-xuexi:before {
+  content: "\e61b";
+}
+
+.icon-Calendar:before {
+  content: "\e62c";
+}
+
+.icon-icon_more1:before {
+  content: "\e62b";
+}
+
+.icon-taolunqu:before {
+  content: "\e8b9";
+}
+
+.icon-wenjuan:before {
+  content: "\e8bb";
+}
+
+.icon-dianzan1:before {
+  content: "\e73f";
+}
+
+.icon-Profile1:before {
+  content: "\e627";
+}
+
+.icon-Bookmark1:before {
+  content: "\e629";
+}
+
+.icon-icon_xinxixiugai:before {
+  content: "\e62a";
+}
+
+.icon-xihuan:before {
+  content: "\e73c";
+}
+
+.icon-shoucang:before {
+  content: "\e73d";
+}
+
+.icon-fasong:before {
+  content: "\e743";
+}
+
+.icon-wenjian:before {
+  content: "\e748";
+}
+
+.icon-jilu:before {
+  content: "\e75b";
+}
+
+.icon-kefu:before {
+  content: "\e769";
+}
+
+.icon-pintuan:before {
+  content: "\e76a";
+}
+
+.icon-hezuo:before {
+  content: "\e777";
+}
+
+.icon-xiangxia:before {
+  content: "\e77e";
+}
+
+.icon-xiangshang:before {
+  content: "\e77f";
+}
+
+.icon-jiahao:before {
+  content: "\e783";
+}
+
+.icon-guanbi:before {
+  content: "\e784";
+}
+
+.icon-gouxuan:before {
+  content: "\e785";
+}
+
+.icon-xiayiye:before {
+  content: "\e77c";
+}
+
+.icon-shangyiye:before {
+  content: "\e77d";
+}
+
+.icon-Location1:before {
+  content: "\e628";
+}
+
+.icon-jiaoxue:before {
+  content: "\f4e8";
+}
+
+.icon-yinle:before {
+  content: "\f507";
+}
+
+.icon-yinliao:before {
+  content: "\f5cf";
+}
+
+.icon-ditu:before {
+  content: "\f4d8";
+}
+
+.icon-dianzan:before {
+  content: "\f4d9";
+}
+
+.icon-dingwei:before {
+  content: "\f4df";
+}
+
+.icon-Home:before {
+  content: "\e61f";
+}
+
+.icon-Category:before {
+  content: "\e620";
+}
+
+.icon-Chat:before {
+  content: "\e621";
+}
+
+.icon-Activity:before {
+  content: "\e622";
+}
+
+.icon-Setting:before {
+  content: "\e623";
+}
+
+.icon-Bookmark:before {
+  content: "\e624";
+}
+
+.icon-Discovery:before {
+  content: "\e625";
+}
+
+.icon-Profile:before {
+  content: "\e626";
+}
