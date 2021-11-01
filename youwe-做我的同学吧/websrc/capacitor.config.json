@@ -1,0 +1,6 @@
+{
+	"appId": "bms.yuhj.xship",
+	"appName": "做我的同学吧",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

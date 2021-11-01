@@ -1,0 +1,7 @@
+{
+  "name": "iyi-ionic-1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
