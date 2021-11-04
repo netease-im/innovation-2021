@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar",
-    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast"
-  },
-  "component": true
-}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "usingComponents": {
+    "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar",
+    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
+    "k-list": "/components/k-list/k-issue-list"
+  }
+}

@@ -1,0 +1,181 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "易玩团",
+				"backgroundColor": "#F5F5F5"
+			}
+		}, {
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/profile-contact",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/profile/profile-myPin",
+			"style": {
+				"navigationBarTitleText": "我的易玩团",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#f5f5f5"
+			}
+
+		}, {
+			"path": "pages/chat/chat",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"navigationBarBackgroundColor": "#fff",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/discovery/discovery",
+			"style": {
+				"navigationBarTitleText": "探索",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/chat/chat-single",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/publish/publish",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+
+		}, {
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/chat/chat-group",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/profile/profile-other",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#f5f5f5"
+			}
+
+		}, {
+			"path": "pages/notifacation/like",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/notifacation/comment",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/notifacation/focus",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/notifacation/verify",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F5F5F5"
+			}
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/profile-intro",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}, {
+			"path": "pages/profile/profile-aboutUs",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#f5f5f5"
+	},
+	"tabBar": {
+		"backgroundColor": "#fff",
+		"borderStyle": "white",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/icon/tab-icon/index_line.png",
+				"selectedIconPath": "static/icon/tab-icon/index_fill.png"
+			},
+			{
+				"pagePath": "pages/discovery/discovery",
+				"iconPath": "static/icon/tab-icon/map_line.png",
+				"selectedIconPath": "static/icon/tab-icon/map_fill.png"
+			},
+			{
+				"pagePath": "pages/chat/chat",
+				"iconPath": "static/icon/tab-icon/chat_line.png",
+				"selectedIconPath": "static/icon/tab-icon/chat_fill.png"
+			},
+			{
+				"pagePath": "pages/profile/profile",
+				"iconPath": "static/icon/tab-icon/profile_line.png",
+				"selectedIconPath": "static/icon/tab-icon/profile_fill.png"
+			}
+		]
+	}
+}

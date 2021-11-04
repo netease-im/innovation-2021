@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "navigationBarBackgroundColor": "#F5F5F5",
-  "usingComponents": {
-    "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar"
-  }
-}

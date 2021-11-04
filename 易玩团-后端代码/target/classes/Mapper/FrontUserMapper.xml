@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ZMetalHeartY.demo.Mapper.FrontUserMapper">
+    <resultMap id="BaseResultMap" type="ZMetalHeartY.demo.Entity.FrontUser">
+        <id column="fu_id" property="fuId" jdbcType="INTEGER"/>
+        <result column="fu_openid" property="fuOpenid" jdbcType="VARCHAR"/>
+        <result column="fu_nickname" property="fuNickname" jdbcType="VARCHAR"/>
+        <result column="fu_sex" property="fuSex" jdbcType="INTEGER"/>
+        <result column="fu_img" property="fuImg" jdbcType="VARCHAR"/>
+        <result column="fu_phone" property="fuPhone" jdbcType="VARCHAR"/>
+        <result column="fu_credit" property="fuCredit" jdbcType="INTEGER"/>
+        <result column="fu_note" property="fuNote" jdbcType="VARCHAR"/>
+        <result column="fu_username" property="fuUsername" jdbcType="VARCHAR"/>
+        <result column="fu_password" property="fuPassword" jdbcType="VARCHAR"/>
+        <result column="fu_status" property="fuStatus" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        fu_id, fu_openid, fu_nickname, fu_sex, fu_img, fu_phone, fu_credit, fu_note, fu_username,
+    fu_password, fu_status
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from front_user
+        where fu_id = #{fuId,jdbcType=INTEGER}
+    </select>
+    <select id="selectAllByCondition" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from front_user
+    </select>
+    <update id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        update
+        front_user
+        set fu_status = 2
+        where fu_id = #{fuId,jdbcType=INTEGER}
+    </update>
+    <insert id="insert" parameterType="ZMetalHeartY.demo.Entity.FrontUser">
+        insert into front_user (fu_id, fu_openid, fu_nickname,
+                                fu_sex, fu_img, fu_phone,
+                                fu_credit, fu_note, fu_username,
+                                fu_password, fu_status)
+        values (#{fuId,jdbcType=INTEGER}, #{fuOpenid,jdbcType=VARCHAR}, #{fuNickname,jdbcType=VARCHAR},
+                #{fuSex,jdbcType=INTEGER}, #{fuImg,jdbcType=VARCHAR}, #{fuPhone,jdbcType=VARCHAR},
+                #{fuCredit,jdbcType=INTEGER}, #{fuNote,jdbcType=VARCHAR}, #{fuUsername,jdbcType=VARCHAR},
+                #{fuPassword,jdbcType=VARCHAR}, #{fuStatus,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="ZMetalHeartY.demo.Entity.FrontUser">
+        insert into front_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="fuId != null">
+                fu_id,
+            </if>
+            <if test="fuOpenid != null">
+                fu_openid,
+            </if>
+            <if test="fuNickname != null">
+                fu_nickname,
+            </if>
+            <if test="fuSex != null">
+                fu_sex,
+            </if>
+            <if test="fuImg != null">
+                fu_img,
+            </if>
+            <if test="fuPhone != null">
+                fu_phone,
+            </if>
+            <if test="fuCredit != null">
+                fu_credit,
+            </if>
+            <if test="fuNote != null">
+                fu_note,
+            </if>
+            <if test="fuUsername != null">
+                fu_username,
+            </if>
+            <if test="fuPassword != null">
+                fu_password,
+            </if>
+            <if test="fuStatus != null">
+                fu_status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="fuId != null">
+                #{fuId,jdbcType=INTEGER},
+            </if>
+            <if test="fuOpenid != null">
+                #{fuOpenid,jdbcType=VARCHAR},
+            </if>
+            <if test="fuNickname != null">
+                #{fuNickname,jdbcType=VARCHAR},
+            </if>
+            <if test="fuSex != null">
+                #{fuSex,jdbcType=INTEGER},
+            </if>
+            <if test="fuImg != null">
+                #{fuImg,jdbcType=VARCHAR},
+            </if>
+            <if test="fuPhone != null">
+                #{fuPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="fuCredit != null">
+                #{fuCredit,jdbcType=INTEGER},
+            </if>
+            <if test="fuNote != null">
+                #{fuNote,jdbcType=VARCHAR},
+            </if>
+            <if test="fuUsername != null">
+                #{fuUsername,jdbcType=VARCHAR},
+            </if>
+            <if test="fuPassword != null">
+                #{fuPassword,jdbcType=VARCHAR},
+            </if>
+            <if test="fuStatus != null">
+                #{fuStatus,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="ZMetalHeartY.demo.Entity.FrontUser">
+        update front_user
+        <set>
+            <if test="fuOpenid != null">
+                fu_openid = #{fuOpenid,jdbcType=VARCHAR},
+            </if>
+            <if test="fuNickname != null">
+                fu_nickname = #{fuNickname,jdbcType=VARCHAR},
+            </if>
+            <if test="fuSex != null">
+                fu_sex = #{fuSex,jdbcType=INTEGER},
+            </if>
+            <if test="fuImg != null">
+                fu_img = #{fuImg,jdbcType=VARCHAR},
+            </if>
+            <if test="fuPhone != null">
+                fu_phone = #{fuPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="fuCredit != null">
+                fu_credit = #{fuCredit,jdbcType=INTEGER},
+            </if>
+            <if test="fuNote != null">
+                fu_note = #{fuNote,jdbcType=VARCHAR},
+            </if>
+            <if test="fuUsername != null">
+                fu_username = #{fuUsername,jdbcType=VARCHAR},
+            </if>
+            <if test="fuPassword != null">
+                fu_password = #{fuPassword,jdbcType=VARCHAR},
+            </if>
+            <if test="fuStatus != null">
+                fu_status = #{fuStatus,jdbcType=INTEGER},
+            </if>
+        </set>
+        where fu_id = #{fuId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="ZMetalHeartY.demo.Entity.FrontUser">
+        update front_user
+        set fu_openid   = #{fuOpenid,jdbcType=VARCHAR},
+            fu_nickname = #{fuNickname,jdbcType=VARCHAR},
+            fu_sex      = #{fuSex,jdbcType=INTEGER},
+            fu_img      = #{fuImg,jdbcType=VARCHAR},
+            fu_phone    = #{fuPhone,jdbcType=VARCHAR},
+            fu_credit   = #{fuCredit,jdbcType=INTEGER},
+            fu_note     = #{fuNote,jdbcType=VARCHAR},
+            fu_username = #{fuUsername,jdbcType=VARCHAR},
+            fu_password = #{fuPassword,jdbcType=VARCHAR},
+            fu_status = #{fuStatus,jdbcType=INTEGER}
+        where fu_id = #{fuId,jdbcType=INTEGER}
+    </update>
+</mapper>

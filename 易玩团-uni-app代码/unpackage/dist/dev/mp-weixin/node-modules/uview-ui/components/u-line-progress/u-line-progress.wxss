@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* 引入全局scss文件 */
+/* 颜色变量 */
+.k-small-title.data-v-02285945 {
+  font-weight: bold;
+  font-size: 40rpx;
+  padding-left: 50rpx;
+  line-height: 100rpx;
+  position: relative;
+}
+.k-small-title.data-v-02285945::after {
+  content: '';
+  width: 60rpx;
+  height: 20rpx;
+  border-radius: 6rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 10rpx;
+  bottom: -6rpx;
+}
+.k-title.data-v-02285945 {
+  font-weight: bold;
+  font-size: 60rpx;
+  padding: 0 50rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.k-title.data-v-02285945::after {
+  content: '';
+  width: 90rpx;
+  height: 30rpx;
+  border-radius: 10rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 34rpx;
+  bottom: -4rpx;
+}
+.empty.data-v-02285945 {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img.data-v-02285945 {
+  width: 50%;
+}
+.empty-text.data-v-02285945 {
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  color: rgba(0, 0, 0, 0.3);
+}
+.k-active.data-v-02285945 {
+  transition: all 0.3s ease;
+}
+.k-hover.data-v-02285945 {
+  transition: all 0.2s ease;
+}
+.k-hover.data-v-02285945:active {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+.k-active.data-v-02285945:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.k-hideText.data-v-02285945 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.u-progress.data-v-02285945 {
+  overflow: hidden;
+  height: 15px;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 100rpx;
+}
+.u-active.data-v-02285945 {
+  width: 0;
+  height: 100%;
+  align-items: center;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-items: flex-end;
+  justify-content: space-around;
+  font-size: 20rpx;
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+.u-striped.data-v-02285945 {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 39px 39px;
+}
+.u-striped-active.data-v-02285945 {
+  -webkit-animation: progress-stripes-data-v-02285945 2s linear infinite;
+          animation: progress-stripes-data-v-02285945 2s linear infinite;
+}
+@-webkit-keyframes progress-stripes-data-v-02285945 {
+0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: 39px 0;
+}
+}
+@keyframes progress-stripes-data-v-02285945 {
+0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: 39px 0;
+}
+}
+

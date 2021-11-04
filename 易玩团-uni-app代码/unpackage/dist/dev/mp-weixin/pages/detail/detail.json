@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar",
+    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
+    "u-input": "/node-modules/uview-ui/components/u-input/u-input",
+    "u-popup": "/node-modules/uview-ui/components/u-popup/u-popup"
+  }
+}

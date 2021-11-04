@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "k-issue-list": "/components/k-list/k-issue-list"
-  }
-}

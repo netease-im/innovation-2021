@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "易玩团",
+  "backgroundColor": "#F5F5F5",
+  "usingComponents": {
+    "u-popup": "/node-modules/uview-ui/components/u-popup/u-popup",
+    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
+    "k-main-list": "/components/k-list/k-main-list",
+    "k-issue-list": "/components/k-list/k-issue-list",
+    "k-sort-list": "/components/k-list/k-sort-list"
+  }
+}

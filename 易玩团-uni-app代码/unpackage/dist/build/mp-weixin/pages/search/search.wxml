@@ -1,0 +1,1 @@
+<view><text class="k-title">搜索结果</text><block wx:if="{{searchContent!=''}}"><k-issue-list vue-id="50cad900-1" type="search" searchContent="{{searchContent}}" bind:__l="__l"></k-issue-list></block></view>

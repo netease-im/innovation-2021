@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "name": "filepath",
+      "type": "ZMetalHeartY.demo.Propertie.FilePathProperties",
+      "sourceType": "ZMetalHeartY.demo.Propertie.FilePathProperties"
+    },
+    {
+      "name": "wechat",
+      "type": "ZMetalHeartY.demo.Propertie.WeChatProperties",
+      "sourceType": "ZMetalHeartY.demo.Propertie.WeChatProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "filepath.issue-audio-doc-base",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.FilePathProperties"
+    },
+    {
+      "name": "filepath.issue-audio-path",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.FilePathProperties"
+    },
+    {
+      "name": "filepath.issue-imgs-doc-base",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.FilePathProperties"
+    },
+    {
+      "name": "filepath.issue-imgs-path",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.FilePathProperties"
+    },
+    {
+      "name": "filepath.issue-video-doc-base",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.FilePathProperties"
+    },
+    {
+      "name": "filepath.issue-video-path",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.FilePathProperties"
+    },
+    {
+      "name": "wechat.appid",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.WeChatProperties"
+    },
+    {
+      "name": "wechat.secret",
+      "type": "java.lang.String",
+      "sourceType": "ZMetalHeartY.demo.Propertie.WeChatProperties"
+    }
+  ],
+  "hints": []
+}
