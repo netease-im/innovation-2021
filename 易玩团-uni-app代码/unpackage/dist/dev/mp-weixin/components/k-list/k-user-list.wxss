@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* 引入全局scss文件 */
+/* 颜色变量 */
+.k-small-title.data-v-b55056ac {
+  font-weight: bold;
+  font-size: 40rpx;
+  padding-left: 50rpx;
+  line-height: 100rpx;
+  position: relative;
+}
+.k-small-title.data-v-b55056ac::after {
+  content: '';
+  width: 60rpx;
+  height: 20rpx;
+  border-radius: 6rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 10rpx;
+  bottom: -6rpx;
+}
+.k-title.data-v-b55056ac {
+  font-weight: bold;
+  font-size: 60rpx;
+  padding: 0 50rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.k-title.data-v-b55056ac::after {
+  content: '';
+  width: 90rpx;
+  height: 30rpx;
+  border-radius: 10rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 34rpx;
+  bottom: -4rpx;
+}
+.empty.data-v-b55056ac {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img.data-v-b55056ac {
+  width: 50%;
+}
+.empty-text.data-v-b55056ac {
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  color: rgba(0, 0, 0, 0.3);
+}
+.k-active.data-v-b55056ac {
+  transition: all 0.3s ease;
+}
+.k-hover.data-v-b55056ac {
+  transition: all 0.2s ease;
+}
+.k-hover.data-v-b55056ac:active {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+.k-active.data-v-b55056ac:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.k-hideText.data-v-b55056ac {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.empty.data-v-b55056ac {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img.data-v-b55056ac {
+  width: 50%;
+}
+.empty-text.data-v-b55056ac {
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  color: rgba(0, 0, 0, 0.3);
+}
+.user.data-v-b55056ac {
+  width: 100%;
+  padding-top: 280rpx;
+}
+.index-list.data-v-b55056ac  .u-index-bar__sidebar {
+  z-index: 99999;
+}
+.user-cell.data-v-b55056ac {
+  padding: 20rpx 40rpx 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-cell .user-left.data-v-b55056ac {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user-cell .user-left .user-name.data-v-b55056ac {
+  margin-left: 14rpx;
+}
+.user-cell .focus-btn.data-v-b55056ac {
+  width: 110rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 56rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #30c6b0;
+  color: #30c6b0;
+  transition: all 0.3s ease;
+}
+.user-cell .focus-btn text.data-v-b55056ac {
+  font-size: 24rpx;
+}
+.user-cell .focus-active.data-v-b55056ac {
+  background-color: #30c6b0;
+  color: #fff;
+}
+

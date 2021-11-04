@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ZMetalHeartY.demo.Mapper.IssueCommentMapper">
+    <resultMap id="BaseResultMap" type="ZMetalHeartY.demo.Entity.IssueComment">
+        <id column="ic_id" property="icId" jdbcType="INTEGER"/>
+        <result column="fu_id" property="fuId" jdbcType="INTEGER"/>
+        <result column="i_id" property="iId" jdbcType="INTEGER"/>
+        <result column="ic_msg" property="icMsg" jdbcType="VARCHAR"/>
+
+        <association property="frontUser" javaType="ZMetalHeartY.demo.Entity.FrontUser">
+            <result column="fu_id" property="fuId"/>
+            <result column="fu_openid" property="fuOpenid"/>
+            <result column="fu_nickname" property="fuNickname"/>
+            <result column="fu_sex" property="fuSex"/>
+            <result column="fu_img" property="fuImg"/>
+            <result column="fu_phone" property="fuPhone"/>
+            <result column="fu_credit" property="fuCredit"/>
+            <result column="fu_note" property="fuNote"/>
+            <result column="fu_username" property="fuUsername"/>
+        </association>
+
+    </resultMap>
+    <sql id="Base_Column_List">
+        issue_comment.ic_id, issue_comment.fu_id, issue_comment.i_id, issue_comment.ic_msg
+    </sql>
+    <sql id="Front_User_Column_List">
+        front_user.fu_id, front_user.fu_openid, front_user.fu_nickname, front_user.fu_sex,
+        front_user.fu_img, front_user.fu_phone, front_user.fu_credit, front_user.fu_note,
+        front_user.fu_username
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Front_User_Column_List"/>
+        from issue_comment
+        left join front_user on front_user.fu_id = issue_comment.fu_id
+        where issue_comment.ic_id = #{icId,jdbcType=INTEGER}
+    </select>
+    <select id="selectAllByCondition" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Front_User_Column_List"/>
+        from issue_comment
+        left join front_user on front_user.fu_id = issue_comment.fu_id
+        <where>
+            <if test="iId!=null and iId!=''">
+                and issue_comment.i_id = #{iId,jdbcType=INTEGER}
+            </if>
+        </where>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete
+        from issue_comment
+        where ic_id = #{icId,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        insert into issue_comment (ic_id, fu_id, i_id,
+                                   ic_msg)
+        values (#{icId,jdbcType=INTEGER}, #{fuId,jdbcType=INTEGER}, #{iId,jdbcType=INTEGER},
+                #{icMsg,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        insert into issue_comment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="icId != null">
+                ic_id,
+            </if>
+            <if test="fuId != null">
+                fu_id,
+            </if>
+            <if test="iId != null">
+                i_id,
+            </if>
+            <if test="icMsg != null">
+                ic_msg,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="icId != null">
+                #{icId,jdbcType=INTEGER},
+            </if>
+            <if test="fuId != null">
+                #{fuId,jdbcType=INTEGER},
+            </if>
+            <if test="iId != null">
+                #{iId,jdbcType=INTEGER},
+            </if>
+            <if test="icMsg != null">
+                #{icMsg,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        update issue_comment
+        <set>
+            <if test="fuId != null">
+                fu_id = #{fuId,jdbcType=INTEGER},
+            </if>
+            <if test="iId != null">
+                i_id = #{iId,jdbcType=INTEGER},
+            </if>
+            <if test="icMsg != null">
+                ic_msg = #{icMsg,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ic_id = #{icId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="ZMetalHeartY.demo.Entity.IssueComment">
+        update issue_comment
+        set fu_id  = #{fuId,jdbcType=INTEGER},
+            i_id   = #{iId,jdbcType=INTEGER},
+            ic_msg = #{icMsg,jdbcType=VARCHAR}
+        where ic_id = #{icId,jdbcType=INTEGER}
+    </update>
+</mapper>

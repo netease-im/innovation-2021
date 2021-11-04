@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "k-scroll-list": "/components/k-list/k-scroll-list",
+    "k-map-card": "/components/k-card/k-map-card"
+  }
+}

@@ -1,0 +1,202 @@
+
+page {
+	background-color: #fff;
+}
+
+@charset "UTF-8";
+/* 引入全局scss文件 */
+/* 颜色变量 */
+.k-small-title {
+  font-weight: bold;
+  font-size: 40rpx;
+  padding-left: 50rpx;
+  line-height: 100rpx;
+  position: relative;
+}
+.k-small-title::after {
+  content: '';
+  width: 60rpx;
+  height: 20rpx;
+  border-radius: 6rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 10rpx;
+  bottom: -6rpx;
+}
+.k-title {
+  font-weight: bold;
+  font-size: 60rpx;
+  padding: 0 50rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.k-title::after {
+  content: '';
+  width: 90rpx;
+  height: 30rpx;
+  border-radius: 10rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 34rpx;
+  bottom: -4rpx;
+}
+.empty {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img {
+  width: 50%;
+}
+.empty-text {
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  color: rgba(0, 0, 0, 0.3);
+}
+.k-active {
+  transition: all 0.3s ease;
+}
+.k-hover {
+  transition: all 0.2s ease;
+}
+.k-hover:active {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+.k-active:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.k-hideText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.post {
+  padding-bottom: 60rpx;
+}
+.post-info {
+  padding: 0 50rpx;
+}
+.post-cell, .post-input {
+  transition: all 0.3s ease;
+  padding: 0 30rpx;
+  height: 100rpx;
+  color: #888;
+  border-radius: 20rpx;
+  margin-top: 90rpx;
+  border: 4rpx solid #eee;
+  position: relative;
+  color: rgba(0, 0, 0, 0.6);
+}
+.post-cell .cell-title, .post-input .cell-title {
+  position: absolute;
+  top: -60rpx;
+  font-size: 28rpx;
+  left: 0;
+}
+.post-cell .cell-input,
+.post-cell .cell-content,
+.post-input .cell-input,
+.post-input .cell-content {
+  flex: 1;
+  line-height: 92rpx;
+  height: 100%;
+  color: #444 !important;
+}
+.post-cell .cell-input .clickNote,
+.post-cell .cell-content .clickNote,
+.post-input .cell-input .clickNote,
+.post-input .cell-content .clickNote {
+  color: #888;
+}
+.post .textarea {
+  padding: 20rpx 30rpx;
+  height: auto !important;
+  letter-spacing: 2rpx;
+}
+.post .textarea  .u-add-tips {
+  display: none;
+}
+.post .textarea  .u-icon__icon {
+  color: #fff;
+}
+.post-short {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-short .left {
+  width: 60%;
+}
+.post-short .right {
+  width: 35%;
+}
+.post-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post-cell .cell-text {
+  padding-right: 20rpx;
+}
+.post .submit-btn {
+  width: 100%;
+  height: 100rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 100rpx;
+  margin-top: 50rpx;
+}
+.learn .k-title::after {
+  background-color: #cce2fd;
+}
+.learn .active {
+  border: 4rpx solid #3e8bf8;
+  color: #3e8bf8;
+}
+.learn .submit-btn {
+  background-color: #3e8bf8;
+  box-shadow: 0 14rpx 24rpx -6rpx #3e8bf8;
+}
+.travel .k-title::after {
+  background-color: #c3f5e3;
+}
+.travel .active {
+  border: 4rpx solid #06cc76;
+  color: #06cc76;
+}
+.travel .submit-btn {
+  background-color: #06cc76;
+  box-shadow: 0 14rpx 24rpx -6rpx #06cc76;
+}
+.food .k-title::after {
+  background-color: #fff1cf;
+}
+.food .active {
+  border: 4rpx solid #fca235;
+  color: #fca235;
+}
+.food .submit-btn {
+  background-color: #fca235;
+  box-shadow: 0 14rpx 24rpx -6rpx #fca235;
+}
+.fun .k-title::after {
+  background-color: #d5d9f8;
+}
+.fun .active {
+  border: 4rpx solid #635df7;
+  color: #635df7;
+}
+.fun .submit-btn {
+  background-color: #635df7;
+  box-shadow: 0 14rpx 24rpx -6rpx #635df7;
+}
+

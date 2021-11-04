@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ZMetalHeartY.demo.Mapper.FlatformAdminMenuMapper" >
+  <resultMap id="BaseResultMap" type="ZMetalHeartY.demo.Entity.FlatformAdminMenu" >
+    <id column="au_id" property="au_id" jdbcType="INTEGER" />
+    <result column="au_url" property="au_url" jdbcType="VARCHAR" />
+    <result column="au_title" property="au_title" jdbcType="CHAR" />
+    <result column="au_info" property="au_info" jdbcType="VARCHAR" />
+    <result column="au_level" property="au_level" jdbcType="INTEGER" />
+    <result column="au_clickable" property="au_clickable" jdbcType="INTEGER" />
+    <result column="au_p_id" property="au_p_id" jdbcType="INTEGER" />
+    <result column="au_sort" property="au_sort" jdbcType="INTEGER" />
+    <result column="au_state" property="au_state" jdbcType="INTEGER" />
+    <result column="au_class" property="au_class" jdbcType="CHAR" />
+    <result column="au_type" property="au_type" jdbcType="INTEGER" />
+    <result column="u_id" property="u_id" jdbcType="INTEGER" />
+    <result column="create_time" property="create_time" jdbcType="VARCHAR" />
+    <result column="delete_status" property="delete_status" jdbcType="INTEGER" />
+    <result column="delete_time" property="delete_time" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    au_id, au_url, au_title, au_info, au_level, au_clickable, au_p_id, au_sort, au_state,au_class, au_type, u_id, create_time, delete_status, delete_time
+  </sql>
+
+  <select id="findByu_id" parameterType="Integer" resultMap="BaseResultMap">
+    select * from flatform_admin_menu where u_id = #{u_id}
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select * from flatform_admin_menu
+  </select>
+  <select id="findByAuLevel" parameterType="Integer" resultMap="BaseResultMap">
+    select * from flatform_admin_menu where au_level = #{value}
+  </select>
+  <select id="findById" parameterType="Integer" resultMap="BaseResultMap">
+    select * from flatform_admin_menu where au_id = #{id}
+  </select>
+  <insert id="insert" parameterType="ZMetalHeartY.demo.Entity.FlatformAdminMenu" >
+    insert into flatform_admin_menu
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="au_id != null" >
+        au_id,
+      </if>
+      <if test="au_url != null" >
+        au_url,
+      </if>
+      <if test="au_title != null" >
+        au_title,
+      </if>
+      <if test="au_info != null" >
+        au_info,
+      </if>
+      <if test="au_level != null" >
+        au_level,
+      </if>
+      <if test="au_clickable != null" >
+        au_clickable,
+      </if>
+      <if test="au_p_id != null" >
+        au_p_id,
+      </if>
+      <if test="au_sort != null" >
+        au_sort,
+      </if>
+      <if test="au_state != null" >
+        au_state,
+      </if>
+      <if test="au_class != null" >
+        au_class,
+      </if>
+      <if test="au_type != null" >
+        au_type,
+      </if>
+      <if test="u_id != null" >
+        u_id,
+      </if>
+      <if test="create_time != null" >
+        create_time,
+      </if>
+      <if test="delete_status != null" >
+        delete_status,
+      </if>
+      <if test="delete_time != null" >
+        delete_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="au_id != null" >
+        #{au_id,jdbcType=INTEGER},
+      </if>
+      <if test="au_url != null" >
+        #{au_url,jdbcType=VARCHAR},
+      </if>
+      <if test="au_title != null" >
+        #{au_title,jdbcType=CHAR},
+      </if>
+      <if test="au_info != null" >
+        #{au_info,jdbcType=VARCHAR},
+      </if>
+      <if test="au_level != null" >
+        #{au_level,jdbcType=INTEGER},
+      </if>
+      <if test="au_clickable != null" >
+        #{au_clickable,jdbcType=INTEGER},
+      </if>
+      <if test="au_p_id != null" >
+        #{au_p_id,jdbcType=INTEGER},
+      </if>
+      <if test="au_sort != null" >
+        #{au_sort,jdbcType=INTEGER},
+      </if>
+      <if test="au_state != null" >
+        #{au_state,jdbcType=INTEGER},
+      </if>
+      <if test="au_class != null" >
+        #{au_class,jdbcType=CHAR},
+      </if>
+      <if test="au_type != null" >
+        #{au_type,jdbcType=INTEGER},
+      </if>
+      <if test="u_id != null" >
+        #{u_id,jdbcType=INTEGER},
+      </if>
+      <if test="create_time != null" >
+        #{create_time,jdbcType=VARCHAR},
+      </if>
+      <if test="delete_status != null" >
+        #{delete_status,jdbcType=INTEGER},
+      </if>
+      <if test="delete_time != null" >
+        #{delete_time,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="ZMetalHeartY.demo.Entity.FlatformAdminMenu" >
+    update flatform_admin_menu
+    <set >
+      <if test="au_url != null" >
+        au_url = #{au_url,jdbcType=VARCHAR},
+      </if>
+      <if test="au_title != null" >
+        au_title = #{au_title,jdbcType=CHAR},
+      </if>
+      <if test="au_info != null" >
+        au_info = #{au_info,jdbcType=VARCHAR},
+      </if>
+      <if test="au_level != null" >
+        au_level = #{au_level,jdbcType=INTEGER},
+      </if>
+      <if test="au_clickable != null" >
+        au_clickable = #{au_clickable,jdbcType=INTEGER},
+      </if>
+      <if test="au_p_id != null" >
+        au_p_id = #{au_p_id,jdbcType=INTEGER},
+      </if>
+      <if test="au_sort != null" >
+        au_sort = #{au_sort,jdbcType=INTEGER},
+      </if>
+      <if test="au_state != null" >
+        au_state = #{au_state,jdbcType=INTEGER},
+      </if>
+      <if test="au_class != null" >
+        au_class = #{au_class,jdbcType=CHAR},
+      </if>
+      <if test="au_type != null" >
+        au_type = #{au_type,jdbcType=INTEGER},
+      </if>
+      <if test="u_id != null" >
+        u_id = #{u_id,jdbcType=INTEGER},
+      </if>
+      <if test="create_time != null" >
+        create_time = #{create_time,jdbcType=VARCHAR},
+      </if>
+      <if test="delete_status != null" >
+        delete_status = #{delete_status,jdbcType=INTEGER},
+      </if>
+      <if test="delete_time != null" >
+        delete_time = #{delete_time,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where au_id = #{au_id,jdbcType=INTEGER}
+    </update>
+  <update id="delete" parameterType="ZMetalHeartY.demo.Entity.FlatformAdminMenu" >
+    update flatform_admin_menu set delete_status = #{delete_status,jdbcType=INTEGER},delete_time = #{delete_time,jdbcType=VARCHAR} where au_id = #{au_id,jdbcType=INTEGER}
+  </update>
+  <select id="findAllPage" parameterType="ZMetalHeartY.demo.Entity.FlatformAdminMenu" resultMap="BaseResultMap">
+    select  <include refid="Base_Column_List"/> from flatform_admin_menu
+    <where>
+      <if test="au_title!=null and au_title!=''">
+        au_title like concat('%',#{au_title},'%') and
+      </if>
+      delete_status = 0
+    </where>
+  </select>
+  <select id="count" parameterType="ZMetalHeartY.demo.Entity.FlatformAdminMenu" resultType="Integer">
+
+    select count(*) from flatform_admin_menu
+    <where>
+      <if test="au_title!=null and au_title!=''">
+        au_title like concat('%',#{au_title},'%')
+      </if>
+      and delete_status = 0
+    </where>
+
+  </select>
+
+  <select id="findByType" parameterType="String" resultMap="BaseResultMap">
+     select * from flatform_admin_menu where au_type = #{type}
+  </select>
+</mapper>

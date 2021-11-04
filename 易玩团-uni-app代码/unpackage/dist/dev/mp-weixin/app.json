@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/profile/profile-contact",
+    "pages/profile/profile-myPin",
+    "pages/chat/chat",
+    "pages/login/login",
+    "pages/discovery/discovery",
+    "pages/chat/chat-single",
+    "pages/publish/publish",
+    "pages/detail/detail",
+    "pages/chat/chat-group",
+    "pages/profile/profile-other",
+    "pages/notifacation/like",
+    "pages/notifacation/comment",
+    "pages/notifacation/focus",
+    "pages/notifacation/verify",
+    "pages/search/search",
+    "pages/profile/profile-intro",
+    "pages/profile/profile-aboutUs"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/icon/tab-icon/index_line.png",
+        "selectedIconPath": "static/icon/tab-icon/index_fill.png"
+      },
+      {
+        "pagePath": "pages/discovery/discovery",
+        "iconPath": "static/icon/tab-icon/map_line.png",
+        "selectedIconPath": "static/icon/tab-icon/map_fill.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "iconPath": "static/icon/tab-icon/chat_line.png",
+        "selectedIconPath": "static/icon/tab-icon/chat_fill.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "static/icon/tab-icon/profile_line.png",
+        "selectedIconPath": "static/icon/tab-icon/profile_fill.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "为了精确化易玩团地点"
+    }
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.14",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

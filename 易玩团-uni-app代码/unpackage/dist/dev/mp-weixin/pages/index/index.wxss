@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* 引入全局scss文件 */
+/* 颜色变量 */
+.k-small-title.data-v-57280228 {
+  font-weight: bold;
+  font-size: 40rpx;
+  padding-left: 50rpx;
+  line-height: 100rpx;
+  position: relative;
+}
+.k-small-title.data-v-57280228::after {
+  content: '';
+  width: 60rpx;
+  height: 20rpx;
+  border-radius: 6rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 10rpx;
+  bottom: -6rpx;
+}
+.k-title.data-v-57280228 {
+  font-weight: bold;
+  font-size: 60rpx;
+  padding: 0 50rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.k-title.data-v-57280228::after {
+  content: '';
+  width: 90rpx;
+  height: 30rpx;
+  border-radius: 10rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 34rpx;
+  bottom: -4rpx;
+}
+.empty.data-v-57280228 {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img.data-v-57280228 {
+  width: 50%;
+}
+.empty-text.data-v-57280228 {
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  color: rgba(0, 0, 0, 0.3);
+}
+.k-active.data-v-57280228 {
+  transition: all 0.3s ease;
+}
+.k-hover.data-v-57280228 {
+  transition: all 0.2s ease;
+}
+.k-hover.data-v-57280228:active {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+.k-active.data-v-57280228:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.k-hideText.data-v-57280228 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+page.data-v-57280228 {
+  background-color: #f6f6f6;
+}
+.fade-enter-active.data-v-57280228,
+.fade-leave-active.data-v-57280228 {
+  transition: opacity 0.5s;
+}
+.fade-enter.data-v-57280228,
+.fade-leave-active.data-v-57280228 {
+  opacity: 0;
+}
+.content.data-v-57280228 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content .nav.data-v-57280228 {
+  width: calc(100% - 40rpx);
+  margin: 30rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .nav .searchBar.data-v-57280228 {
+  width: calc(100% - 120rpx);
+  height: 100rpx;
+  border-radius: 30rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 26rpx;
+}
+.content .nav .searchBar > image.data-v-57280228 {
+  width: 40rpx;
+  height: 40rpx;
+}
+.content .nav .searchBar > input.data-v-57280228 {
+  flex: 1;
+  height: 100%;
+  line-height: 100rpx;
+  padding: 0 20rpx;
+  color: #555555;
+}
+.content .nav .searchBar .searchPH.data-v-57280228 {
+  color: #eee;
+}
+.content .nav .add.data-v-57280228 {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+  color: #30c6b0;
+}
+.content .nav .add-icon.data-v-57280228 {
+  font-size: 40rpx;
+}
+.content .tab-swiper.data-v-57280228 {
+  width: 100%;
+  font-size: 34rpx;
+  height: 80rpx;
+}
+.content .tab-swiper .swiper-container.data-v-57280228 {
+  width: calc(160rpx * 6);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.content .tab-swiper .line.data-v-57280228 {
+  width: 160rpx;
+  height: 16rpx;
+  position: absolute;
+  bottom: 18rpx;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.content .tab-swiper .line-main.data-v-57280228 {
+  width: 40%;
+  height: 100%;
+  background-color: #30c6b0;
+  border-radius: 4rpx;
+}
+.content .tab.data-v-57280228 {
+  width: 160rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #888;
+  transition: all 0.3s ease;
+}
+.content .active.data-v-57280228 {
+  color: #444;
+  -webkit-transform: scale(1.3) translateY(-3px);
+          transform: scale(1.3) translateY(-3px);
+}
+.content .swiper.data-v-57280228,
+.content .scrollView.data-v-57280228 {
+  width: 100%;
+  height: calc(100vh - 240rpx);
+}
+

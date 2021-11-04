@@ -1,0 +1,1 @@
+<view class="intro"><image class="intro-img" src="https://tva1.sinaimg.cn/large/006KgH1wly1gvzz5dn05tj30go0e1n0v.jpg" mode></image><text class="intro-title">{{title}}</text><text class="intro-describe">{{describe}}</text></view>

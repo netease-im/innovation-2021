@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* 引入全局scss文件 */
+/* 颜色变量 */
+.k-small-title.data-v-7a79cf07 {
+  font-weight: bold;
+  font-size: 40rpx;
+  padding-left: 50rpx;
+  line-height: 100rpx;
+  position: relative;
+}
+.k-small-title.data-v-7a79cf07::after {
+  content: '';
+  width: 60rpx;
+  height: 20rpx;
+  border-radius: 6rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 10rpx;
+  bottom: -6rpx;
+}
+.k-title.data-v-7a79cf07 {
+  font-weight: bold;
+  font-size: 60rpx;
+  padding: 0 50rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.k-title.data-v-7a79cf07::after {
+  content: '';
+  width: 90rpx;
+  height: 30rpx;
+  border-radius: 10rpx;
+  background-color: rgba(48, 198, 176, 0.4);
+  z-index: -1;
+  position: absolute;
+  right: 34rpx;
+  bottom: -4rpx;
+}
+.empty.data-v-7a79cf07 {
+  width: 100%;
+  height: calc(100vh - 400rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img.data-v-7a79cf07 {
+  width: 50%;
+}
+.empty-text.data-v-7a79cf07 {
+  font-size: 40rpx;
+  letter-spacing: 2rpx;
+  color: rgba(0, 0, 0, 0.3);
+}
+.k-active.data-v-7a79cf07 {
+  transition: all 0.3s ease;
+}
+.k-hover.data-v-7a79cf07 {
+  transition: all 0.2s ease;
+}
+.k-hover.data-v-7a79cf07:active {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+.k-active.data-v-7a79cf07:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.k-hideText.data-v-7a79cf07 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.u-swipe-action.data-v-7a79cf07 {
+  width: auto;
+  height: initial;
+  position: relative;
+  overflow: hidden;
+}
+.u-swipe-view.data-v-7a79cf07 {
+
+  display: flex;
+  flex-direction: row;
+
+  height: initial;
+  position: relative;
+  /* 这一句很关键，覆盖默认的绝对定位 */
+}
+.u-swipe-content.data-v-7a79cf07 {
+  flex: 1;
+}
+.u-swipe-del.data-v-7a79cf07 {
+  position: relative;
+  font-size: 30rpx;
+  color: #ffffff;
+}
+.u-btn-text.data-v-7a79cf07 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
